@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Shopping Table</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+
+<body>
+    <div class="filters">
+        <div class="filter-section">
+            <h1>Filters</h1>
+            <h3>Color</h3>
+            <label><input type="checkbox" class="filter" data-column="0" value="Red"> Red</label>
+            <label><input type="checkbox" class="filter" data-column="0" value="Black"> Black</label>
+            <label><input type="checkbox" class="filter" data-column="0" value="White"> White</label>
+            <label><input type="checkbox" class="filter" data-column="0" value="Blue"> Blue</label>
+        </div>
+        <div class="filter-section">
+            <h3>Category</h3>
+            <label><input type="checkbox" class="filter" data-column="1" value="Electronics"> Electronics</label>
+            <label><input type="checkbox" class="filter" data-column="1" value="Footwear"> Footwear</label>
+            <label><input type="checkbox" class="filter" data-column="1" value="Clothing"> Clothing</label>
+            <label><input type="checkbox" class="filter" data-column="1" value="Home Appliances"> Home
+                Appliances</label>
+        </div>
+        <div class="filter-section">
+            <h3>Price</h3>
+            <label><input type="checkbox" class="filter" data-column="2" value="799"> $799</label>
+            <label><input type="checkbox" class="filter" data-column="2" value="1299"> $1299</label>
+        </div>
+        <div class="filter-section">
+            <h3>Brand</h3>
+            <label><input type="checkbox" class="filter" data-column="3" value="Apple"> Apple</label>
+            <label><input type="checkbox" class="filter" data-column="3" value="Nike"> Nike</label>
+            <label><input type="checkbox" class="filter" data-column="3" value="Adidas"> Adidas</label>
+        </div>
+    </div>
+    <div class="table-wrapper">
+        <div class="controls">
+            <select id="sortDropdown" onchange="handleSort()">
+                <option value="" disabled selected>Sort by</option>
+                <option value="4">Customer Rating</option>
+                <option value="2">Price (Low to High)</option>
+                <option value="2_desc">Price (High to Low)</option>
+                <option value="5">Better Discount</option>
+            </select>
+            <input type="text" id="filterInput" placeholder="Search..." onkeyup="filterTable()">
+        </div>
+        <div class="table-container">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>Color</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Brand</th>
+                        <th>Product Name</th>
+                        <th>Customer Rating</th>
+                        <th>Discount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Red</td>
+                        <td>Electronics</td>
+                        <td>799</td>
+                        <td>Apple</td>
+                        <td>iPhone 13</td>
+                        <td>4.8</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Black</td>
+                        <td>Electronics</td>
+                        <td>1299</td>
+                        <td>Apple</td>
+                        <td>MacBook Pro</td>
+                        <td>4.7</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>White</td>
+                        <td>Footwear</td>
+                        <td>150</td>
+                        <td>Nike</td>
+                        <td>Nike Air Max</td>
+                        <td>4.5</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>Blue</td>
+                        <td>Footwear</td>
+                        <td>180</td>
+                        <td>Adidas</td>
+                        <td>Adidas Ultraboost</td>
+                        <td>4.6</td>
+                        <td>7%</td>
+                    </tr>
+                    <tr>
+                        <td>Blue</td>
+                        <td>Clothing</td>
+                        <td>60</td>
+                        <td>Levi's</td>
+                        <td>Levi's Jeans</td>
+                        <td>4.3</td>
+                        <td>12%</td>
+                    </tr>
+                    <tr>
+                        <td>Gray</td>
+                        <td>Electronics</td>
+                        <td>699</td>
+                        <td>Samsung</td>
+                        <td>Samsung Galaxy S21</td>
+                        <td>4.6</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Silver</td>
+                        <td>Home Appliances</td>
+                        <td>89</td>
+                        <td>Instant Pot</td>
+                        <td>Instant Pot</td>
+                        <td>4.7</td>
+                        <td>8%</td>
+                    </tr>
+                    <tr>
+                        <td>Black</td>
+                        <td>Home Appliances</td>
+                        <td>399</td>
+                        <td>Dyson</td>
+                        <td>Dyson Vacuum</td>
+                        <td>4.9</td>
+                        <td>18%</td>
+                    </tr>
+                    <tr>
+                        <td>Brown</td>
+                        <td>Accessories</td>
+                        <td>150</td>
+                        <td>Ray-Ban</td>
+                        <td>Ray-Ban Sunglasses</td>
+                        <td>4.4</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Brown</td>
+                        <td>Accessories</td>
+                        <td>1200</td>
+                        <td>Gucci</td>
+                        <td>Gucci Handbag</td>
+                        <td>4.8</td>
+                        <td>22%</td>
+                    </tr>
+                    <tr>
+                        <td>Green</td>
+                        <td>Electronics</td>
+                        <td>699</td>
+                        <td>Sony</td>
+                        <td>Sony PlayStation 5</td>
+                        <td>4.9</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>Yellow</td>
+                        <td>Footwear</td>
+                        <td>200</td>
+                        <td>Puma</td>
+                        <td>Puma Sneakers</td>
+                        <td>4.6</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Yellow</td>
+                        <td>Footwear</td>
+                        <td>200</td>
+                        <td>Puma</td>
+                        <td>Puma Sneakers</td>
+                        <td>4.6</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Yellow</td>
+                        <td>Footwear</td>
+                        <td>200</td>
+                        <td>Puma</td>
+                        <td>Puma Sneakers</td>
+                        <td>4.6</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Red</td>
+                        <td>Footwear</td>
+                        <td>200</td>
+                        <td>Lakme</td>
+                        <td>Lakme Consellar</td>
+                        <td>4.6</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Red</td>
+                        <td>shirt</td>
+                        <td>200</td>
+                        <td>Puma</td>
+                        <td>Puma Sneakers</td>
+                        <td>4.6</td>
+                        <td>70%</td>
+                    <tr>
+                        <td>Red</td>
+                        <td>Lipstick</td>
+                        <td>400</td>
+                        <td>lakme</td>
+                        <td>Maybelline</td>
+                        <td>4.8</td>
+                        <td>20%</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Yellow</td>
+                        <td>Footwear</td>
+                        <td>200</td>
+                        <td>Puma</td>
+                        <td>Puma Sneakers</td>
+                        <td>4.6</td>
+                        <td>10%</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <script src="table.js"></script>
+</body>
+
+</html>
