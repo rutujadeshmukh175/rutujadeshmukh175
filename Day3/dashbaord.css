@@ -1,0 +1,286 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    /* background: url('video.mp4') no-repeat center center fixed; */
+    /* background-size: cover; */
+    height: 100%;
+    /* background: url('photo.webp') no-repeat center center fixed; */
+    background-size: cover;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* background: rgba(0, 0, 0, 0.437); */
+    background: white;
+    color: black;
+
+}
+
+.signup-form,
+.login-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    max-width: 600px;
+    /* width: 200px; */
+    animation: fadeIn 1s ease-in-out;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover;
+}
+
+
+.signup-form h1,
+.login-form h1 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.signup-form p,
+.login-form p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 12px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #5cb85c;
+    color: white;
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.icon {
+    padding: 10px;
+}
+
+button:hover {
+    background: #4cae4c;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+header h1 {
+    color: #fff;
+    margin-right: 420px;
+    font-size: 23px;
+
+}
+
+.login-form h1 {
+    color: #201f1f;
+    font-size: 16px;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    /* margin: 0 15px; */
+    padding: 5px 5px;
+    margin-left: 40px;
+    transition: background 0.3s, color 0.3s;
+    /* margin-right: 100px; */
+}
+
+header nav a:hover,
+.login-form a {
+    /* background-color: #575757; */
+    color: #908b8b;
+}
+
+.search {
+    margin-right: 80px;
+}
+
+.search input {
+    width: 270px;
+}
+
+footer {
+    /* background: wheat; */
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 470px;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+footer p {}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section a {
+    margin-top: 70px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+    color: black;
+    /* margin-left: 18px; */
+    font-size: 10px;
+
+}
+
+.footer-section p {
+    margin: 5px 0;
+    color: black;
+    font-size: 8px;
+}
+
+.footer-section a {
+    color: #5cb85c;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section a:hover {
+    color: #5cb85c;
+
+}
+
+.newsletter-input {
+    display: flex;
+    padding: 0px;
+    /* margin-bottom: 30px; */
+    /* margin-bottom: 30px; */
+    /* justify-content: center; */
+}
+
+.newsletter-input input {
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    /* border-radius: 5px 0 0 5px; */
+    outline: none;
+    font-size: 8px;
+    /* Reduced font size */
+}
+
+.newsletter-input button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background: #5cb85c;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.newsletter-input button:hover {
+    background: #4cae4c;
+}
+
+.footer-bottom {
+    /* background-color: white; */
+    background: white;
+    color: black;
+    text-align: center;
+    /* padding: 1px 0; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 7px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.phn {
+    color: black;
+    margin-top: 20px;
+    font-size: 8px;
+}
+
+.popup-message {
+    display: none;
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 350px;
+    position: absolute;
+    width: 15%;
+    text-align: center;
+    top: -60px;
+    left: 50%;
+    /* transform: translateX(-50%); */
+}
+
+.follow {
+    margin-left: 32px;
+}
+
+.social {
+    margin-left: 32px;
+}
+
+.news {
+    margin-right: 40px;
+}
