@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="logindesign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-section">
+            <h1>Welcome back!</h1>
+            <p>Enter your Credentials to access your account</p>
+            <form>
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" id="remember-me"> Remember me for 30 days
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="alternative-login">
+                <p>Or</p>
+                <button class="google-login"><i class="fab fa-google"></i> Sign in with Google</button>
+                <button class="apple-login"><i class="fab fa-apple"></i> Sign in with Apple</button>
+            </div>
+            <p>Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+        <div class="image-section">
+            <img src="leaf.jpg" alt="Plant Image">
+        </div>
+    </div>
+</body>
+
+</html>
