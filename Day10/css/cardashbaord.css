@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c2c2e;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar .settings {
+    position: absolute;
+    bottom: 20px;
+}
+
+.sidebar .settings a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dashboard {
+    margin-top: 20px;
+}
+
+.stats-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #3a3a3c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 22%;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card .percentage {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.miles-statistics,
+.car-statistics {
+    background-color: #3a3a3c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+}
+
+.recommendations {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.car-card {
+    background-color: #3a3a3c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.car-card .details {
+    margin-top: 10px;
+}
+
+.car-card .details h4 {
+    margin: 0;
+}

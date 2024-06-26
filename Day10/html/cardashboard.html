@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/Day10/css/cardashbaord.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">Motiv.</div>
+            <ul>
+                <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-car"></i> Assets</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Booking</a></li>
+                <li><a href="#"><i class="fas fa-dollar-sign"></i> Sell Cars</a></li>
+                <li><a href="#"><i class="fas fa-cart-plus"></i> Buy Cars</a></li>
+                <li><a href="#"><i class="fas fa-tools"></i> Services</a></li>
+                <li><a href="#"><i class="fas fa-calendar-check"></i> Calendar</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+            </ul>
+            <div class="settings">
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </div>
+        </nav>
+        <div class="main-content">
+            <header>
+                <input type="text" placeholder="Search or type">
+                <div class="user-profile">
+                    <img src="/Day10/assests/user.jpg" alt="User Profile">
+                </div>
+            </header>
+            <section class="dashboard">
+                <div class="stats-cards">
+                    <div class="card energy">
+                        <h3>Energy</h3>
+                        <div class="chart-container">
+                            <canvas id="energyChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card usage">
+                        <h3>Usage</h3>
+                        <div class="chart-container">
+                            <canvas id="usageChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card efficiency">
+                        <h3>Efficiency</h3>
+                        <div class="chart-container">
+                            <canvas id="efficiencyChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card capacity">
+                        <h3>Capacity</h3>
+                        <div class="chart-container">
+                            <canvas id="capacityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics">
+                    <div class="miles-statistics">
+                        <h3>Miles Statistics</h3>
+                        <div class="chart-container">
+                            <canvas id="milesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="car-statistics">
+                        <h3>Car Statistics</h3>
+                        <div class="chart-container">
+                            <canvas id="carChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendations">
+                    <div class="car-card">
+                        <img src="/Day10/assests/mini.jpg" alt="Mini Cooper">
+                        <div class="details">
+                            <h4>Mini Cooper</h4>
+                            <p>64% Recommend</p>
+                            <p>$32/h</p>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <img src="/Day10/assests/maruti_suzuki.jpg" alt="Porsche 911 Carrera">
+                        <div class="details">
+                            <h4>Porsche 911 Carrera</h4>
+                            <p>74% Recommend</p>
+                            <p>$28/h</p>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <img src="/Day10/assests/image.jpg" alt="Porsche 911 Carrera">
+                        <div class="details">
+                            <h4>Porsche 911 Carrera</h4>
+                            <p>74% Recommend</p>
+                            <p>$28/h</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="/Day10/js/cardashboard.js"></script>
+</body>
+
+</html>
