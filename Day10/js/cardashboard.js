@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            cutout: '80%'
         }
     });
 
@@ -25,13 +31,19 @@ document.addEventListener('DOMContentLoaded', function () {
             labels: ['Usage', 'Remaining'],
             datasets: [{
                 data: [157, 43],
-                backgroundColor: ['#FF6384', '#36A2EB'],
-                hoverBackgroundColor: ['#FF6384', '#36A2EB']
+                backgroundColor: ['#FFCE56', '#36A2EB'],
+                hoverBackgroundColor: ['#FFCE56', '#36A2EB']
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            cutout: '80%'
         }
     });
 
@@ -43,13 +55,19 @@ document.addEventListener('DOMContentLoaded', function () {
             labels: ['Efficiency', 'Remaining'],
             datasets: [{
                 data: [9, 91],
-                backgroundColor: ['#FF6384', '#36A2EB'],
-                hoverBackgroundColor: ['#FF6384', '#36A2EB']
+                backgroundColor: ['#4BC0C0', '#36A2EB'],
+                hoverBackgroundColor: ['#4BC0C0', '#36A2EB']
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            cutout: '80%'
         }
     });
 
@@ -58,34 +76,43 @@ document.addEventListener('DOMContentLoaded', function () {
     var capacityChart = new Chart(capacityCtx, {
         type: 'doughnut',
         data: {
-            labels: ['Capacity', 'Remaining'],
+            labels: ['Capacity Used', 'Remaining'],
             datasets: [{
                 data: [25, 75],
-                backgroundColor: ['#FF6384', '#36A2EB'],
-                hoverBackgroundColor: ['#FF6384', '#36A2EB']
+                backgroundColor: ['#9966FF', '#36A2EB'],
+                hoverBackgroundColor: ['#9966FF', '#36A2EB']
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            cutout: '80%'
         }
     });
 
     // Miles Chart
     var milesCtx = document.getElementById('milesChart').getContext('2d');
     var milesChart = new Chart(milesCtx, {
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: ['1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM'],
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             datasets: [{
                 label: 'Miles',
-                data: [100, 120, 150, 180, 130, 170],
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
+                data: [50, 75, 150, 100, 200, 150, 300],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                fill: true
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 y: {
                     beginAtZero: true
@@ -97,19 +124,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Car Chart
     var carCtx = document.getElementById('carChart').getContext('2d');
     var carChart = new Chart(carCtx, {
-        type: 'line',
+        type: 'bar',
         data: {
-            labels: ['9 AM', '11 AM', '1 PM', '3 PM', '5 PM', '7 PM'],
+            labels: ['Model 1', 'Model 2', 'Model 3', 'Model 4', 'Model 5'],
             datasets: [{
-                label: 'Car Usage',
-                data: [65, 59, 80, 81, 56, 55],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1,
-                fill: true,
+                label: 'Number of Cars',
+                data: [10, 5, 15, 20, 25],
+                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                borderColor: 'rgba(153, 102, 255, 1)',
+                borderWidth: 1
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 y: {
                     beginAtZero: true
