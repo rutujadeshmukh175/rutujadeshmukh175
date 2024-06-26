@@ -146,3 +146,67 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    var milesCtx = document.getElementById('milesChart').getContext('2d');
+    var milesChart = new Chart(milesCtx, {
+        type: 'bar',
+        data: {
+            labels: ['1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM'],
+            datasets: [{
+                label: 'Miles',
+                data: [50, 100, 157, 80, 90, 70, 60],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                borderSkipped: false,
+                hoverBackgroundColor: 'rgba(54, 162, 235, 0.5)',
+                hoverBorderColor: 'rgba(54, 162, 235, 1)',
+                borderRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    backgroundColor: '#000',
+                    titleColor: '#fff',
+                    bodyColor: '#fff',
+                    displayColors: false,
+                    cornerRadius: 3,
+                    padding: 10,
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.raw + 'k';
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                    },
+                    ticks: {
+                        color: '#fff'
+                    }
+                },
+                y: {
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)',
+                    },
+                    ticks: {
+                        color: '#fff',
+                        callback: function (value) {
+                            return value + 'k';
+                        }
+                    },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});
