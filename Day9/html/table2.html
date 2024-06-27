@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Table</title>
+    <link rel="stylesheet" href="/Day9/css/table2.css">
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="search" placeholder="Search...">
+        <button class="add-customer">+ Add customer</button>
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="select-all"></th>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Rate</th>
+                    <th>Balance</th>
+                    <th>Deposit</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="customer-table-body">
+                <!-- Table rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div class="pagination">
+            <span>Rows per page: 10</span>
+            <span>1-10 of 97</span>
+        </div>
+    </div>
+    <script src="/Day9/js/table2.js"></script>
+</body>
+
+</html>
