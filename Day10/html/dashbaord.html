@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/Day10/css/dashbaord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="/Day10/logo.jpg" alt="Logo" class="logo-image"> <!-- Replace with your logo path -->
+            <!-- <span>Dabang</span> -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Order</a></li>
+                <li><a href="#"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Sales Report</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a class="logout" href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Dashboard</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search here...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="profile">
+                <img src="/Day10/user.jpg" alt="Profile">
+                <span>Scott</span>
+            </div>
+        </header>
+        <section class="summary-section">
+            <div class="summary-container">
+
+                <div class="summary-cards-block">
+                    <span>
+                        <!-- <h3>Total Sales</h3> -->
+                    </span>
+
+                    <!-- <h2>Total Sales</h2> -->
+
+                    <div class="summary-card">
+                        <h3>Total Sales</h3>
+                        <p>10850</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Total Order</h3>
+                        <p>300</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Product Sold</h3>
+                        <p>120</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>New Customers</h3>
+                        <p>8</p>
+                    </div>
+                </div>
+                <div class="chart total-revenue-chart">
+                    <h5>Total Revenue</h5>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="chart"> -->
+        <section class="charts">
+            <div class="chart1">
+                <h3>Chart Order</h3>
+                <canvas id="orderChart"></canvas>
+            </div>
+            <div class="pie-charts-container">
+                <h3>Pie Chart</h3>
+
+                <div class="pie-chart">
+                    <h5>Total Order</h5>
+                    <canvas id="totalOrderChart"></canvas>
+                </div>
+                <div class="pie-chart">
+                    <h5>Customer Growth</h5>
+                    <canvas id="customerGrowthChart"></canvas>
+                </div>
+                <div class="pie-chart">
+                    <h5>Total Revenue</h5>
+                    <canvas id="totalRevenueChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-widgets">
+            <div class="widget">
+                <h3>Top Products</h3>
+                <canvas id="topProductsChart"></canvas>
+            </div>
+            <div class="widget">
+                <h3>Target vs Reality</h3>
+                <canvas id="targetChart"></canvas>
+            </div>
+            <div class="widget widget-small">
+                <h3>Customer Satisfaction</h3>
+                <canvas id="satisfactionChart"></canvas>
+            </div>
+        </section>
+    </div>
+    <script src="/Day10/js/dashbaord.js"></script>
+</body>
+
+</html>
